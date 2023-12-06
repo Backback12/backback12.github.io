@@ -1,24 +1,40 @@
 /* @import url('https://fonts.cdnfonts.com/css/tahoma'); */
 
+
+:root {
+    --bg-primary: #b4aca0;
+    --bg-primary-hover: #b4aca0;
+    --inset-light: #ffffff;
+    --inset-dark: #222222;
+
+    --text-select: #dddddd;
+}
+
+
 @font-face {
     font-family: 'Tahoma XP';
-    src: url('/assets/windows-xp-tahoma.woff') format('woff'), 'Chrome 6+', Firefox 3.6+, IE 9+, Safari 5.1+
+    src: url('/assets/windows-xp-tahoma.woff') format('woff'), 'Chrome 6+', 'Firefox 3.6+', 'IE 9+', 'Safari 5.1+'
          url('/assets/windows-xp-tahoma.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }  
 
 body {
-    background-color: #D4CDC4;
+    background-color: var(--bg-primary);
     margin: 0px;
     padding: 4px;
     /* border: 4px; */
 
     font-family: 'Tahoma XP', sans-serif;
     font-size: 24px;
+    /* font-weight: 100; */
+    /* font-stretch: 100px; */
+    /* font-kerning: 100px; */
+    letter-spacing: 0.5px;
+    box-shadow: inset white 2px 2px 2px, inset black -2px -2px 2px;
 }
 
 .navbar {
-    /* padding: 0px;
-    margin: 0px; */
+    padding: 0px;
+    margin: 0px;
 }
 .navbar .title {
     color: white;
@@ -26,7 +42,7 @@ body {
     padding: 4px 6px;
 }
 .navbar .menu-items {
-    background-color: #D4CDC4;
+    background-color: var(--bg-primary);
     display: inline-grid;
     grid-template-columns: 60px 60px 60px 60px;
     
@@ -37,26 +53,36 @@ body {
     text-align: center;
     padding: 4px;
 }
-
+h1 {
+    padding:0;
+    margin:0;
+   }
 .dropdown-btn {
-    cursor: pointer;
-    background-color: #00000000;
+    /* cursor: pointer; */
+    background: none;
+    color: black;
     border: none;
     font-family: 'Tahoma XP', sans-serif;
     font-size: 24px;
     padding: 5px 18px;
 }
-
+.dropdown-btn:hover, .dropdown-btn:focus {
+    box-shadow: inset var(--inset-light) 1.5px 1.5px 0px, inset var(--inset-dark) -1.5px -1.5px 0px;
+}
 .dropdown {
     position: relative;
     display: inline-block;
+    margin: 0px;
+    /* border: 1px; */
 }
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #D4CDC4;
+    background-color: var(--bg-primary);
     min-width: 160px;
     z-index: 1;
+    box-shadow: inset var(--inset-light) 1px 1px 2px, inset var(--inset-dark) -1px -1px 2px;
+    
 }
 .dropdown-content a {
     padding: 5px 12px;
@@ -64,17 +90,92 @@ body {
     color: black;
     display: block;
 }
+.dropdown-content a:hover {
+    background-color: #180A6C;
+    color: white;
+}
 
 .show {
     display: block;
 }
 
 
+h1, h2, h3 {
+    padding: 0px;
+    margin: 0px;
+}
+
 
 main {
     background: #FFFFFF;
-    height: 70vh;
-    padding: 2px 4px;
+    height: 83vh;
+    /* padding: 2px 4px; */
+    /* padding: 0px; */
+
+    display: grid;
+    /* grid-template-areas: 
+        'menu main main main'
+        'menu main main main'; */
+    grid-template-areas: 'menu main main main main main main';
+    margin: 0px 5px;
+}
+
+
+.inline-img {
+    display: inline;
+    margin: 0 0.125em;
+    padding: 0;
+    vertical-align: baseline;
+
+    /* height: 16px; */
+}
+
+.menu {
+    grid-area: menu;
+    cursor: default;
+    background-color: var(--bg-primary);
+    padding: 0px;
+    margin: 0px;
+    /* box-shadow: inset var(--inset-light) 1px 1px 1px, inset var(--inset-dark) -1px -1px 1px; */
+}
+.menu .window {
+    background-color: white;
+    /* box-shadow: inset var(--inset-dark) 1px 1px 1px, var(--bg-primary) 1px 1px, var(--inset-light) 2px 2px; */
+    box-shadow: inset var(--inset-dark) 1px 1px 1px, inset var(--inset-light) -1px -1px 1px;
+    margin: 4px;
+    padding: 0px 4px;
+    height: 90%;
+}
+.menu .window div {
+    margin: 2px;
+}
+.menu .window a {
+    background-color: #dddddd;
+    padding: 2px;
+}
+
+.main {
+    grid-area: main;
+    cursor: default;
+    background-color: var(--bg-primary);
+    padding: 0px;
+    margin: 0px;
+    /* box-shadow: inset var(--inset-light) 1px 1px 1px, inset var(--inset-dark) -1px -1px 1px; */
+}
+.main .window {
+    background-color: white;
+    box-shadow: inset var(--inset-dark) 1px 1px 1px, inset var(--inset-light) -1px -1px 1px;
+    margin: 4px;
+    padding: 0px 8px;
+    height: 90%;
+    font-family: 'Times New Roman', 'Times', 'serif';
+}
+
+
+footer {
+    margin: 4px 2px;
+    padding: 1px 6px 3px;
+    box-shadow: inset var(--inset-dark) 1px 1px, inset var(--inset-light) -1px -1px;
 }
 
 div {

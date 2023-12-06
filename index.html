@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Connor Pagtakhan</title>
     <link rel="stylesheet" href="/styles.css">
-    <!-- <link rel="icon" href="./favicon.ico" type="image/x-icon"> -->
+    <!-- <link rel="icon" href="/favicon.ico" type="image/x-icon"> -->
+    <link rel="icon" href="/assets/objsel.dll_14_287-0.png" type="image/x-icon">
 
     <!-- <link href="https://fonts.cdnfonts.com/css/tahoma" rel="stylesheet"> -->
 </head>
@@ -14,9 +15,11 @@
 
 <navbar class="navbar">
     <div class="title">
-        Navigation
+        <img class="inline-img" src="/assets/objsel.dll_14_287-0.png">
+        Connor Pagtakhan
     </div>
     <!-- <div class="menu-items"> -->
+    <!-- <div style="margin: 0px; padding: 0px;"> -->
         <div class="dropdown">
             <button onclick="myFunction(0)" class="dropdown-btn">File</button>
             <div id="myDropdown0" class="dropdown-content">
@@ -24,13 +27,21 @@
                 <a href="#">Link 2</a>
                 <a href="#">Link 3</a>
             </div>
-        </div>
-        <div class="dropdown">
+        </div><!--
+     --><div class="dropdown">
             <button onclick="myFunction(1)" class="dropdown-btn">Edit</button>
             <div id="myDropdown1" class="dropdown-content">
                 <a href="#">Edit 1</a>
                 <a href="#">Edit 2</a>
                 <a href="#">Edit 3</a>
+            </div>
+        </div><!--
+     --><div class="dropdown">
+            <button onclick="myFunction(2)" class="dropdown-btn">Contact</button>
+            <div id="myDropdown2" class="dropdown-content">
+                <a href="#">LinkedIn</a>
+                <a href="#">Instagram</a>
+                <a href="#">Website</a>
             </div>
         </div>
         
@@ -38,11 +49,56 @@
 </navbar>
 
 <main>
-    <textarea name="Text1" cols="40" rows="5" style="border: none; font-family: 'Tahoma XP'; font-size: 24px;"></textarea>
+    <!-- <textarea name="Text1" cols="40" rows="5" style="border: none; font-family: 'Tahoma XP'; font-size: 24px;"></textarea> -->
+    
+    <div class="menu">
+        <div class="window">
+            Information
+            <div>
+                <img class="inline-img" src="/assets/shell32.dll_14_324-2.png">
+                <a>About Me</a>
+            </div>
+            <div>
+                <img class="inline-img" src="/assets/wab32.dll_14_IDI_ICON_ABOOK-1.png">
+                Skills and Education
+            </div>
+            <div>
+                <img class="inline-img" src="/assets/shell32.dll_14_173-3.png">
+                Notable Projects
+            </div>
+            <div>
+                <img class="inline-img" src="/assets/shell32.dll_14_13-1.png">
+                All Projects
+            </div>
+            <div>
+                <img class="inline-img" src="/assets/setupapi.dll_14_3-3.png">
+                Hobbies
+            </div>
+            <div>
+                <img class="inline-img" src="/assets/smtpsnap.dll_14_8611-1.png">
+                Contact
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="window">
+            <h2>About Me</h2>
+            <p>
+                My name is Connor Pagtakhan! I study at the University of Manitoba and as of now,
+                I am in my fourth year of Computer Engineering.
+                I was born in Winnipeg Manitoba. @ me on instagram!
+            </p>
+        </div>
+    </div>
 </main>
 <!-- <h1>My website</h1>   -->
 
 	<!-- <script src="index.js"></script> -->
+
+<footer>
+    Connor Pagtakhan | 2023
+</footer>
+
 
 <script>
 /* When the user clicks on the button,

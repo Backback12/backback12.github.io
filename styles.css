@@ -1,0 +1,83 @@
+/* @import url('https://fonts.cdnfonts.com/css/tahoma'); */
+
+@font-face {
+    font-family: 'Tahoma XP';
+    src: url('/assets/windows-xp-tahoma.woff') format('woff'), 'Chrome 6+', Firefox 3.6+, IE 9+, Safari 5.1+
+         url('/assets/windows-xp-tahoma.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}  
+
+body {
+    background-color: #D4CDC4;
+    margin: 0px;
+    padding: 4px;
+    /* border: 4px; */
+
+    font-family: 'Tahoma XP', sans-serif;
+    font-size: 24px;
+}
+
+.navbar {
+    /* padding: 0px;
+    margin: 0px; */
+}
+.navbar .title {
+    color: white;
+    background-image: linear-gradient(to right, #180A6C, #9ABCE4);
+    padding: 4px 6px;
+}
+.navbar .menu-items {
+    background-color: #D4CDC4;
+    display: inline-grid;
+    grid-template-columns: 60px 60px 60px 60px;
+    
+}
+.navbar .menu-items .item {
+    /* border-style: dashed;
+    border-width: 1px; */
+    text-align: center;
+    padding: 4px;
+}
+
+.dropdown-btn {
+    cursor: pointer;
+    background-color: #00000000;
+    border: none;
+    font-family: 'Tahoma XP', sans-serif;
+    font-size: 24px;
+    padding: 5px 18px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #D4CDC4;
+    min-width: 160px;
+    z-index: 1;
+}
+.dropdown-content a {
+    padding: 5px 12px;
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.show {
+    display: block;
+}
+
+
+
+main {
+    background: #FFFFFF;
+    height: 70vh;
+    padding: 2px 4px;
+}
+
+div {
+    /* border-style: dashed;
+    border-width: 1px; */
+}

@@ -18,7 +18,8 @@
 }  
 
 body {
-    background-color: var(--bg-primary);
+    /* background-color: var(--bg-primary); */
+    background-color: blue;
     margin: 0px;
     padding: 4px;
     /* border: 4px; */
@@ -33,6 +34,8 @@ body {
 }
 
 .navbar {
+    background-color: var(--bg-primary);
+    /* border-color: var(--bg-primary); */
     padding: 0px;
     margin: 0px;
 }
@@ -107,7 +110,7 @@ h1, h2, h3 {
 
 
 main {
-    background: #FFFFFF;
+    background-color: var(--bg-primary);
     height: 83vh;
     /* padding: 2px 4px; */
     /* padding: 0px; */

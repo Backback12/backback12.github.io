@@ -4,8 +4,9 @@
 :root {
     --bg-primary: #b4aca0;
     --bg-primary-hover: #b4aca0;
+    --bg-light: rgb(235, 232, 228);
     --inset-light: #ffffff;
-    --inset-dark: #222222;
+    --inset-dark: #464646;
 
     --text-select: #dddddd;
 }
@@ -19,7 +20,7 @@
 
 body {
     /* background-color: var(--bg-primary); */
-    background-color: blue;
+    background-color: rgb(100, 144, 211);
     margin: 0px;
     padding: 4px;
     /* border: 4px; */
@@ -30,7 +31,14 @@ body {
     /* font-stretch: 100px; */
     /* font-kerning: 100px; */
     letter-spacing: 0.5px;
-    box-shadow: inset white 2px 2px 2px, inset black -2px -2px 2px;
+    user-select: none;
+}
+
+.window {
+    margin: 10px;
+    padding: 6px;
+    box-shadow: inset var(--inset-light) 2px 2px 2px, inset var(--inset-dark) -2px -2px 2px;
+    background-color: var(--bg-primary);
 }
 
 .navbar {
@@ -43,6 +51,7 @@ body {
     color: white;
     background-image: linear-gradient(to right, #180A6C, #9ABCE4);
     padding: 4px 6px;
+    margin: 0px;
 }
 .navbar .menu-items {
     background-color: var(--bg-primary);
@@ -59,7 +68,81 @@ body {
 h1 {
     padding:0;
     margin:0;
-   }
+}
+
+/* .titlebar-wincontrols {
+    display: inline-block;
+    margin: 0px;
+    padding: 1px;
+    min-width: fit-content;
+    text-align: start;
+} */
+
+/* .buttons-wrapper {
+    display: inline-block;
+    width: auto;
+    margin: 0px;
+    padding: 1px;
+
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    text-align: start;
+} */
+navbar ul {
+    display: block;
+    list-style-type: none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    overflow: hidden;
+}
+navbar li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    list-style-type: none;
+    float: left;
+    padding: 0px;
+    margin: 0px;
+}
+.button {
+    background-color: var(--bg-primary);
+    color: black;
+
+    margin: 1px;
+    padding-top: 2px;
+
+    display: inline-block;
+    min-width: 12px;
+    min-height: 10px;
+    width: 17px;
+    height: 14px;
+    text-align: center;
+    vertical-align: bottom;
+    line-height: 10px;
+    
+    box-shadow: inset var(--inset-light) 1px 1px 2px, inset var(--inset-dark) -1px -1px 2px;
+}
+/* .button:active:hover { */
+.button:active {
+    /* background-color: #180A6C; */
+    box-shadow: inset var(--inset-dark) 1px 1px 2px, inset var(--inset-light) -1px -1px 2px;
+    /* padding-left: 24x; */
+    /* transform: translateX(1px); */
+}
+.button:active > svg {
+    transform: translateX(1px);
+}
+
+
+
+
+
 .dropdown-btn {
     /* cursor: pointer; */
     background: none;
@@ -99,7 +182,7 @@ h1 {
 }
 
 .show {
-    display: block;
+    display: block !important; 
 }
 
 
@@ -119,7 +202,8 @@ main {
     /* grid-template-areas: 
         'menu main main main'
         'menu main main main'; */
-    grid-template-areas: 'menu main main main main main main';
+    /* grid-template-areas: 'menu main main main main main main'; */
+    grid-template-columns: 1fr 2fr;
     margin: 0px 5px;
 }
 
@@ -134,7 +218,7 @@ main {
 }
 
 .menu {
-    grid-area: menu;
+    /* grid-area: menu; */
     cursor: default;
     background-color: var(--bg-primary);
     padding: 0px;
@@ -148,22 +232,38 @@ main {
     margin: 4px;
     padding: 0px 4px;
     height: 90%;
+    
 }
 .menu .window div {
     margin: 2px;
 }
 .menu .window a {
-    background-color: #dddddd;
+    /* background-color: #dddddd; */
     padding: 2px;
 }
+.menu .window .btn {
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    padding: 2px;
+    background-color: white;
+    /* background-color: #180A6C; */
+    cursor: pointer;
+}
+.menu .window .btn.active {
+    background-color: #dddddd;
+    /* background-color: red; */
+}
+
 
 .main {
-    grid-area: main;
+    /* grid-area: main; */
     cursor: default;
     background-color: var(--bg-primary);
     padding: 0px;
     margin: 0px;
     /* box-shadow: inset var(--inset-light) 1px 1px 1px, inset var(--inset-dark) -1px -1px 1px; */
+    overflow: hidden;
 }
 .main .window {
     background-color: white;
@@ -171,13 +271,30 @@ main {
     margin: 4px;
     padding: 0px 8px;
     height: 90%;
-    font-family: 'Times New Roman', 'Times', 'serif';
+    /* font-family: 'Times New Roman', 'Times', 'serif'; */
+    overflow-y: scroll;
+    /* overflow: hidden; */
+}
+
+
+.page {
+    display: none;
 }
 
 
 footer {
-    margin: 4px 2px;
-    padding: 1px 6px 3px;
+    margin: 4px 14px 4px 2px;
+    /* padding: 1px 6px 3px; */
+    /* box-shadow: inset var(--inset-dark) 1px 1px, inset var(--inset-light) -1px -1px; */
+    /* display: inline-block; */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* overflow: inherit; */
+    /* grid-template-columns: 60px 60px 60px 60px; */
+}
+.indent {
+    padding: 1px 4px 4px;
+    margin: 2px;
     box-shadow: inset var(--inset-dark) 1px 1px, inset var(--inset-light) -1px -1px;
 }
 
@@ -185,3 +302,27 @@ div {
     /* border-style: dashed;
     border-width: 1px; */
 }
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+    
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--bg-light);
+    /* box-shadow: inset var(--inset-dark) 1px 1px, inset var(--inset-light) -1px -1px; */
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--bg-primary);
+    box-shadow: inset var(--inset-light) 2px 2px 2px, inset var(--inset-dark) -2px -2px 1px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    /* background: #555; */
+  }

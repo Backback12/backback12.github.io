@@ -315,7 +315,6 @@ function dragElement(elmnt) {
   function dragMouseDown(e) {
     e = e || window.event;
     e.preventDefault();
-    console.log(typeof(event.target.className))
     if (typeof(event.target.className) == 'string' && event.target.className.includes('draggable')) {
         // get the mouse cursor position at startup:
         pos3 = e.clientX;
@@ -351,7 +350,7 @@ function closeWindow() {
     let window = document.getElementsByClassName('window')[0]
     // window.style.animation = 'closeWindow 1s linear forwards';
 
-    
+
     window.style.height = '200px';
     setTimeout(function() {
         window.style.width = '200px';

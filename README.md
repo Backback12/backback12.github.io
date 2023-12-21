@@ -1,5 +1,7 @@
 # Connor Pagtakhan's Online Portfolio
 
+Hi! I'm Connor and I thought it would be fun to create my online portfolio as a Windows 2000 inspired UI. I like the vibe and it takes me back to when I played Space Cadet Pinball all the time.
+
 ### (!) Information
 - About Me
   - uh
@@ -38,19 +40,20 @@ In the future I could research more about color
 saturation in the images as I believe that is the next step to making these images feel more authentic.
 
 
-### OKAY!!!!!! NOW the NEW method:
-#### Resize image 
-  I'm using 4:3 aspect ratio so the dimensions are 320x240, 114x152, 152x203, 
-  Another aspect ratio is 3:2, 102x152, 203x305, 254x381
-  5:4: 203x254,
-  6:5: 254x305
+## OKAY!!!!!! NOW the NEW method:
+### Resize Image
+  I'm using 4:3 aspect ratio so the dimensions are ```320x240, 114x152, 152x203,``` 
+  <br>Another aspect ratio is 3:2, 102x152, 203x305, 254x381
+  <br>5:4: 203x254,
+  <br>6:5: 254x305
 
   Idk man you should just standardize it once you find a good size
-  like 300x250 or something
-#### Dither!
-  In GIMP: Colors > Dither
-    Dithering Method: Bayer (Used in older compressed images)
-    Bit depth: RGB 565? That seems to be good
+  <br>like ```300x250``` or something
+### Dither!
+  In ```GIMP: Colors > Dither```
+
+  ```Dithering Method: Bayer``` (Used in older compressed images)
+  ```Bit depth: RGB 565?``` That seems to be good
 
 
 
@@ -58,9 +61,17 @@ saturation in the images as I believe that is the next step to making these imag
 
 # Idea Generating
 Inspo:
-  https://alula.github.io/SpaceCadetPinball/
+- Windows 2000 preview: https://copy.sh/v86/?profile=windows2000
+- Space Cadet Pinball: https://alula.github.io/SpaceCadetPinball/
 
-Ideas:
-- Last Modified December 2023
-- Let window take up 90% of the space, not all of it: leave some edges so it looks like a window
-- Background blue? XP background?
+
+# Ideas:
+- [x] "Last Modified" Section
+- [x] Let window take up 90% of the space, not all of it: leave some edges so it looks like a window
+- [x] Background blue? XP background?
+- [ ] Allow resize on window borders as well (top/bottom/left/right)
+- [ ] Help button functionality
+- [ ] Add "file structure" lines to the menu
+- [ ] Clean HTML structures
+- [ ] Clean CSS names 
+- [ ] Tidy Javascript functions (into script.js?)

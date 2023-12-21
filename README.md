@@ -38,6 +38,21 @@ In the future I could research more about color
 saturation in the images as I believe that is the next step to making these images feel more authentic.
 
 
+### OKAY!!!!!! NOW the NEW method:
+#### Resize image 
+  I'm using 4:3 aspect ratio so the dimensions are 320x240, 114x152, 152x203, 
+  Another aspect ratio is 3:2, 102x152, 203x305, 254x381
+  5:4: 203x254,
+  6:5: 254x305
+
+  Idk man you should just standardize it once you find a good size
+  like 300x250 or something
+#### Dither!
+  In GIMP: Colors > Dither
+    Dithering Method: Bayer (Used in older compressed images)
+    Bit depth: RGB 565? That seems to be good
+
+
 
 
 

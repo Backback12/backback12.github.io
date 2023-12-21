@@ -7,48 +7,42 @@
     <title>Connor Pagtakhan</title>
     <link rel="stylesheet" href="/styles.css">
     <!-- <link rel="icon" href="/favicon.ico" type="image/x-icon"> -->
-    <link rel="icon" href="/assets/objsel.dll_14_287-0.png" type="image/x-icon">
+    <link rel="icon" href="/assets/person_icon.png" type="image/x-icon">
 
-    <!-- <link href="https://fonts.cdnfonts.com/css/tahoma" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.cdnfonts.com/css/tahoma&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.cdnfonts.com/css/tahoma" rel="stylesheet">
 </head>
 <body>
 <div class="window">
 <navbar class="navbar">
-    <!-- <div class="title" style="display: flex; position: relative; text-align: start;">
-        <div>
-            <img class="inline-img" src="/assets/objsel.dll_14_287-0.png">
-            Connor Pagtakhan
-        </div> 
-        <div class="titlebar-wincontrols">
-            <ul class="buttons-wrapper">
-              <li class="button minimize">
-                <svg class="button-content replaced-svg" height="0.104181in" width="0.125017in" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 10"><path d="M 2.00,7.00            C 2.00,7.00 8.00,7.00 8.00,7.00              8.00,7.00 8.00,9.00 8.00,9.00              8.00,9.00 2.00,9.00 2.00,9.00              2.00,9.00 2.00,7.00 2.00,7.00 Z" fill="black" id="Minimize" stroke-width="0" stroke="black"></path></svg>
-              </li>
-              <li class="button maximize">
-                <svg class="button-content replaced-svg" height="0.104181in" width="0.125017in" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 10"><path d="M 2.00,2.00            C 2.00,2.00 9.00,2.00 9.00,2.00              9.00,2.00 9.00,8.00 9.00,8.00              9.00,8.00 2.00,8.00 2.00,8.00              2.00,8.00 2.00,2.00 2.00,2.00 Z            M 1.00,0.00            C 1.00,0.00 1.00,9.00 1.00,9.00              1.00,9.00 10.00,9.00 10.00,9.00              10.00,9.00 10.00,0.00 10.00,0.00              10.00,0.00 1.00,0.00 1.00,0.00 Z" fill="black" id="Maximize" stroke-width="0" stroke="black"></path></svg>
-              </li>
-              <li class="spacer"></li><li class="button close">
-                <svg class="button-content replaced-svg" height="10" width="12" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:svg="http://www.w3.org/2000/svg"><g id="layer1" transform="translate(0,-1042.3622)"><path d="m 2.0025485,1043.3853 2.0198115,0 0,1.0185 0.984011,0 0,0.984 1.985286,0 0,-0.984 1.001274,0 0,-1.0185 2.002548,0 0,1.0013 0,0 0,0 -1.001274,0 0,1.0012 -1.001274,0 0,0.9841 -1.001274,0 0,1.0012 1.001274,0 0,1.0013 1.001274,0 0,1.0013 1.001274,0 0,1.0013 -2.002548,0 0,-1.0013 -1.001274,0 0,-0.984 -1.985286,0 0,0.984 -1.001274,0 0,1.0013 -2.0025485,0 0,-1.0013 1.0012745,0 0,-1.0013 1.001274,0 0,-1.0013 1.001274,0 0,-1.0012 -1.001274,0 0,-0.9841 -1.001274,0 0,-1.0012 -1.0012745,0 0,-1.0186 z" fill="black" id="Close" stroke-width="0"></path></g></svg>
-              </li>
-            </ul>
-          </div>
-    </div> -->
-    <ul class="title">
-        <li style="margin: 0px; padding: 0px;">
-            <img class="inline-img" src="/assets/objsel.dll_14_287-0.png">
+    <ul class="title draggable">
+        <li class="draggable" style="margin: 0px; padding: 0px;">
+            <img class="inline-icon" src="/assets/person_icon.png">
             Connor Pagtakhan
         </li> 
         <li class="titlebar-wincontrols" style="float: right; padding: 0px; margin: 0px;">
             <ul class="buttons-wrapper" style="margin: 0px; padding: 0px">
-              <li class="button minimize">
+                <li class="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="10" width="12" viewBox="0 0 12 10">
+                        <metadata>Made with Pixels to Svg https://codepen.io/shshaw/pen/XbxvNj</metadata>
+                        <path stroke="#000000" d="M4 2h4M3 3h2M7 3h2M3 4h2M7 4h2M6 5h2M5 6h2M5 7h2M5 9h2M5 10h2" />
+                        </svg>
+                </li>
+                <li class="button" onclick="closeWindow()">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="10" width="12" viewBox="0 0 12 10">
+                        <metadata>Made with Pixels to Svg https://codepen.io/shshaw/pen/XbxvNj</metadata>
+                        <path stroke="#000000" d="M2 3h2M8 3h2M3 4h2M7 4h2M4 5h4M5 6h2M4 7h4M3 8h2M7 8h2M2 9h2M8 9h2" />
+                        </svg>
+                </li>
+              <!-- <li class="button minimize">
                 <svg class="button-content replaced-svg" height="0.104181in" width="0.125017in" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 10"><path d="M 2.00,7.00            C 2.00,7.00 8.00,7.00 8.00,7.00              8.00,7.00 8.00,9.00 8.00,9.00              8.00,9.00 2.00,9.00 2.00,9.00              2.00,9.00 2.00,7.00 2.00,7.00 Z" fill="black" id="Minimize" stroke-width="0" stroke="black"></path></svg>
               </li>
               <li class="button maximize">
                 <svg class="button-content replaced-svg" height="0.104181in" width="0.125017in" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 10"><path d="M 2.00,2.00            C 2.00,2.00 9.00,2.00 9.00,2.00              9.00,2.00 9.00,8.00 9.00,8.00              9.00,8.00 2.00,8.00 2.00,8.00              2.00,8.00 2.00,2.00 2.00,2.00 Z            M 1.00,0.00            C 1.00,0.00 1.00,9.00 1.00,9.00              1.00,9.00 10.00,9.00 10.00,9.00              10.00,9.00 10.00,0.00 10.00,0.00              10.00,0.00 1.00,0.00 1.00,0.00 Z" fill="black" id="Maximize" stroke-width="0" stroke="black"></path></svg>
               </li>
-              <li class="spacer"></li><li class="button close">
+              <li class="button close">
                 <svg class="button-content replaced-svg" height="10" width="12" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:svg="http://www.w3.org/2000/svg"><g id="layer1" transform="translate(0,-1042.3622)"><path d="m 2.0025485,1043.3853 2.0198115,0 0,1.0185 0.984011,0 0,0.984 1.985286,0 0,-0.984 1.001274,0 0,-1.0185 2.002548,0 0,1.0013 0,0 0,0 -1.001274,0 0,1.0012 -1.001274,0 0,0.9841 -1.001274,0 0,1.0012 1.001274,0 0,1.0013 1.001274,0 0,1.0013 1.001274,0 0,1.0013 -2.002548,0 0,-1.0013 -1.001274,0 0,-0.984 -1.985286,0 0,0.984 -1.001274,0 0,1.0013 -2.0025485,0 0,-1.0013 1.0012745,0 0,-1.0013 1.001274,0 0,-1.0013 1.001274,0 0,-1.0012 -1.001274,0 0,-0.9841 -1.001274,0 0,-1.0012 -1.0012745,0 0,-1.0186 z" fill="black" id="Close" stroke-width="0"></path></g></svg>
-              </li>
+              </li> -->
             </ul>
         </li>
     </ul>
@@ -90,37 +84,40 @@
     <!-- <textarea name="Text1" cols="40" rows="5" style="border: none; font-family: 'Tahoma XP'; font-size: 24px;"></textarea> -->
     
     <div class="menu" id="menu">
-        <div class="window">
-            Information
-            <div>
-                <img class="inline-img" src="/assets/shell32.dll_14_324-2.png">
+        <!-- <ul class="window"> -->
+        <ul class="menu-list">
+            <!-- <li>
+                Information
+            </li> -->
+            <li>
+                <img class="inline-icon" src="/assets/shell32.dll_14_324-2.png">
                 <button class="btn active">About Me</button>
-            </div>
-            <div>
-                <img class="inline-img" src="/assets/wab32.dll_14_IDI_ICON_ABOOK-1.png">
-                <button class="btn">Skills and Education</button>
+            </li>
+            <li>
+                <img class="inline-icon" src="/assets/wab32.dll_14_IDI_ICON_ABOOK-1.png">
+                <button class="btn">Skills & Education</button>
                 
-            </div>
-            <div>
-                <img class="inline-img" src="/assets/shell32.dll_14_173-3.png">
+            </li>
+            <li>
+                <img class="inline-icon" src="/assets/shell32.dll_14_173-3.png">
                 <button class="btn">Notable Projects</button>
-            </div>
-            <div>
-                <img class="inline-img" src="/assets/shell32.dll_14_13-1.png">
+            </li>
+            <li>
+                <img class="inline-icon" src="/assets/shell32.dll_14_13-1.png">
                 <button class="btn">All Projects</button>
-            </div>
-            <div>
-                <img class="inline-img" src="/assets/setupapi.dll_14_3-3.png">
+            </li>
+            <li>
+                <img class="inline-icon" src="/assets/setupapi.dll_14_3-3.png">
                 <button class="btn">Hobbies</button>
-            </div>
-            <div>
-                <img class="inline-img" src="/assets/smtpsnap.dll_14_8611-1.png">
+            </li>
+            <li>
+                <img class="inline-icon" src="/assets/smtpsnap.dll_14_8611-1.png">
                 <button class="btn">Contact</button>
-            </div>
-        </div>
+            </li>
+        </ul>
     </div>
-    <div class="main">
-        <div class="window">
+    <div class="content">
+        <!-- <div class="window"> -->
             <div class="page show">
                 <h2>About Me</h2>
                 <img style="float: right; margin: 6px 6px 16px 16px; box-shadow: 4px 4px 2px #444; width: 30vw; max-width: 300px;" src="/assets/Connor0.png" width="200" />
@@ -190,11 +187,11 @@
                     <ul>
                         <li>LinkedIn: <a href="https://www.linkedin.com/in/connor-pagtakhan-5a617b206/">Connor Pagtakhan</a></li>
                         <li>GitHub: <a href="https://github.com/Backback12">Backback12</a></li>
-                        <li>Instagram: <a href="https://www.instagram.com/cpagtakhan/">cpagtakhan</a></li>
+                        <li>Instagram: <a href="https://www.instagram.com/cpagtakhan/">@cpagtakhan</a></li>
                     </ul>
                 </p>
             </div>
-        </div>
+        <!-- </div> -->
     </div>
 </main>
 <!-- <h1>My website</h1>   -->
@@ -207,17 +204,53 @@
         &copy Connor Pagtakhan
     </div>
     <div class="indent" style="width: 100%;">
+        <img class="inline-icon" src="/assets/netshell.dll_14_1117-2.png">
         Updated: 12/2023
     </div>
 </footer>
 
 </div> <!-- window -->
 
+
 <script>
+// center window
+const div = document.querySelector('.window');
+const divWidth = div.offsetWidth;
+const divHeight = div.offsetHeight;
+
+const windowWidth = window.innerWidth;
+const windowHeight = window.innerHeight;
+
+const leftPosition = (windowWidth - divWidth) / 2;
+const topPosition = (windowHeight - divHeight) / 2;
+
+div.style.left = leftPosition + 'px';
+div.style.top = topPosition + 'px';
+
+
+
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function myFunction(index) {
-    document.getElementById("myDropdown" + index).classList.toggle("show");
+    let show = !document.getElementById("myDropdown" + index).classList.contains("show");
+    
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+        }
+    }
+    
+
+    // document.getElementById("myDropdown" + index).classList.toggle("show");
+    if (show) {
+        document.getElementById("myDropdown" + index).classList.add("show");
+    }
+    else {
+        document.getElementById("myDropdown" + index).classList.remove("show");
+    }
 }
 
 // Close the dropdown menu if the user clicks outside of it
@@ -260,6 +293,73 @@ function showPage(index) {
     pages[index].className += " show";
 }
 
+
+
+
+
+// Movable window lmao
+// Optimize ************************************************************************
+// Make the DIV element draggable:
+dragElement(document.getElementsByClassName("window")[0]);
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (elmnt.getElementsByClassName("title")[0]) {
+    // if present, the header is where you move the DIV from:
+    elmnt.getElementsByClassName("title")[0].onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    console.log(typeof(event.target.className))
+    if (typeof(event.target.className) == 'string' && event.target.className.includes('draggable')) {
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        document.onmousemove = elementDrag;
+    }
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
+
+function closeWindow() {
+    let window = document.getElementsByClassName('window')[0]
+    // window.style.animation = 'closeWindow 1s linear forwards';
+
+    
+    window.style.height = '200px';
+    setTimeout(function() {
+        window.style.width = '200px';
+        setTimeout(function() {
+            window.style.display = 'none';
+        }, 20)
+    }, 50);
+}
 </script>
 </body>
 </html>

@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Connor Pagtakhan</title>
    <link rel="stylesheet" href="/styles.css">
@@ -10,15 +11,17 @@
    <link href="https://fonts.cdnfonts.com/css/tahoma" rel="stylesheet">
 </head>
 <body>
-   <div class="desktop-icon person">
-      <img class="desktop-img">
-      <div class="tint"></div>
-      <span>Portfolio</span>
-   </div>
-   <div class="desktop-icon recycle">
-      <img class="desktop-img">
-      <div class="tint"></div>
-      <span>Recycling</span>
+   <div class="desktop">
+      <div class="desktop-icon recycle">
+         <img class="desktop-img">
+         <div class="tint"></div>
+         <span>Recycling</span>
+      </div>
+      <div class="desktop-icon person">
+         <img class="desktop-img">
+         <div class="tint"></div>
+         <span>Portfolio</span>
+      </div>
    </div>
    <div class="window">
       <div class="resizer top"></div>
@@ -29,7 +32,7 @@
          <ul class="title draggable">
             <li class="draggable" style="margin: 0px; padding: 0px;">
                <img class="inline-icon" src="/assets/person_icon.png">
-               Connor Pagtakhan
+               <span>Connor Pagtakhan</span>
             </li>
             <li class="titlebar-wincontrols" style="float: right; padding: 0px; margin: 0px;">
                <ul class="buttons-wrapper" style="margin: 0px; padding: 0px">
@@ -50,7 +53,7 @@
          </ul>
          <div class="menu-items">
             <div class="dropdown">
-               <button onclick="myFunction(0)" class="dropdown-btn">File</button>
+               <button onclick="myFunction(0)" class="dropdown-btn"><u>F</u>ile</button>
                <div id="myDropdown0" class="dropdown-content">
                   <a href="#">Link 1</a>
                   <a href="#">Link 2</a>
@@ -58,7 +61,7 @@
                </div>
             </div><!--   
          --><div class="dropdown">
-               <button onclick="myFunction(1)" class="dropdown-btn">Edit</button>
+               <button onclick="myFunction(1)" class="dropdown-btn"><u>E</u>dit</button>
                <div id="myDropdown1" class="dropdown-content">
                   <a href="#">Edit 1</a>
                   <a href="#">Edit 2</a>
@@ -66,8 +69,18 @@
                </div>
             </div><!--
          --><div class="dropdown">
-               <button onclick="myFunction(2)" class="dropdown-btn">Contact</button>
+               <button onclick="myFunction(2)" class="dropdown-btn"><u>C</u>ontact</button>
                <div id="myDropdown2" class="dropdown-content">
+                  <a href="https://www.linkedin.com/in/connor-pagtakhan-5a617b206/">LinkedIn</a>
+                  <a href="https://github.com/Backback12">GitHub</a>
+                  <a href="https://www.instagram.com/cpagtakhan/">Instagram</a>
+                  <a href="#">Email</a>
+                  <a href="#">Website</a>
+               </div>
+            </div><!--
+         --><div class="dropdown">
+               <button onclick="myFunction(3)" class="dropdown-btn"><u>H</u>elp</button>
+               <div id="myDropdown3" class="dropdown-content">
                   <a href="https://www.linkedin.com/in/connor-pagtakhan-5a617b206/">LinkedIn</a>
                   <a href="https://github.com/Backback12">GitHub</a>
                   <a href="https://www.instagram.com/cpagtakhan/">Instagram</a>
@@ -88,7 +101,7 @@
                   </button>
                </li>
                <li>
-                  <img class="inline-icon" src="/assets/icons/tree_middle.png">
+                  <img class="inline-icon" src="/assets/icons/tree_nse.png">
                   <button class="btn">
                      <img class="inline-icon" src="/assets/wab32.dll_14_IDI_ICON_ABOOK-1.png">
                      <span>Skills & Education</span>
@@ -96,24 +109,26 @@
 
                </li>
                <li>
-                  <img class="inline-icon" src="/assets/icons/tree_middle.png">
+                  <!-- <img class="inline-icon" src="/assets/icons/tree_nse.png"> -->
+                  <img class="inline-icon expand" src="/assets/icons/tree_nse_minus.png">
                   <button class="btn">
+                     <!-- <img class="inline-icon" src="/assets/icons/tree_nse_plus.png"> -->
                      <img class="inline-icon" src="/assets/shell32.dll_14_173-3.png">
                      <span>Notable Projects</span>
                   </button>
-                  <ul class="menu-list">
+                  <ul class="menu-list expand-menu">
                      <li>
                         <img class="inline-icon" src="/assets/icons/tree_ns.png">
-                        <img class="inline-icon" src="/assets/icons/tree_middle.png">
-                        <button class="btn">
+                        <img class="inline-icon" src="/assets/icons/tree_nse.png">
+                        <button class="btn-sub">
                            <img class="inline-icon" src="/assets/shell32.dll_14_13-1.png">
                            <span>Project 1</span>
                         </button>
                      </li>
                      <li>
                         <img class="inline-icon" src="/assets/icons/tree_ns.png">
-                        <img class="inline-icon" src="/assets/icons/tree_end.png">
-                        <button class="btn">
+                        <img class="inline-icon" src="/assets/icons/tree_ne.png">
+                        <button class="btn-sub">
                            <img class="inline-icon" src="/assets/shell32.dll_14_13-1.png">
                            <span>Project 2</span>
                         </button>
@@ -121,21 +136,64 @@
                   </ul>
                </li>
                <li>
-                  <img class="inline-icon" src="/assets/icons/tree_middle.png">
+                  <img class="inline-icon expand" src="/assets/icons/tree_nse_minus.png">
                   <button class="btn">
                      <img class="inline-icon" src="/assets/shell32.dll_14_13-1.png">
-                     <span>All Projects</span>
+                     <span>Blog</span>
                   </button>
+                  <ul class="menu-list expand-menu">
+                     <li>
+                        <img class="inline-icon" src="/assets/icons/tree_ns.png">
+                        <img class="inline-icon" src="/assets/icons/tree_nse.png">
+                        <button class="btn-sub blogpost-btn">
+                           <img class="inline-icon" src="/assets/shell32.dll_14_13-1.png">
+                           <span>W.E.C.</span>
+                        </button>
+                     </li>
+                     <li>
+                        <img class="inline-icon" src="/assets/icons/tree_ns.png">
+                        <img class="inline-icon" src="/assets/icons/tree_ne.png">
+                        <button class="btn-sub blogpost-btn">
+                           <img class="inline-icon" src="/assets/shell32.dll_14_13-1.png">
+                           <span>Project 2</span>
+                        </button>
+                     </li>
+                     <li>
+                        <img class="inline-icon" src="/assets/icons/tree_ns.png">
+                        <img class="inline-icon" src="/assets/icons/tree_ne.png">
+                        <button class="btn-sub blogpost-btn">
+                           <img class="inline-icon" src="/assets/shell32.dll_14_13-1.png">
+                           <span>Project 2</span>
+                        </button>
+                     </li>
+                     <li>
+                        <img class="inline-icon" src="/assets/icons/tree_ns.png">
+                        <img class="inline-icon" src="/assets/icons/tree_ne.png">
+                        <button class="btn-sub blogpost-btn">
+                           <img class="inline-icon" src="/assets/shell32.dll_14_13-1.png">
+                           <span>Project 2</span>
+                        </button>
+                     </li>
+                     <li>
+                        <img class="inline-icon" src="/assets/icons/tree_ns.png">
+                        <img class="inline-icon" src="/assets/icons/tree_ne.png">
+                        <button class="btn-sub blogpost-btn">
+                           <img class="inline-icon" src="/assets/shell32.dll_14_13-1.png">
+                           <span>Project 2</span>
+                        </button>
+                     </li>
+                     
+                  </ul>
                </li>
                <li>
-                  <img class="inline-icon" src="/assets/icons/tree_middle.png">
+                  <img class="inline-icon" src="/assets/icons/tree_nse.png">
                   <button class="btn">
                      <img class="inline-icon" src="/assets/setupapi.dll_14_3-3.png">
                      <span>Hobbies</span>
                   </button>
                </li>
                <li>
-                  <img class="inline-icon" src="/assets/icons/tree_end.png">
+                  <img class="inline-icon" src="/assets/icons/tree_ne.png">
                   <button class="btn">
                      <img class="inline-icon" src="/assets/smtpsnap.dll_14_8611-1.png">
                      <span>Contact</span>
@@ -146,9 +204,10 @@
          <div class="content">
             <!-- <div class="window"> -->
             <div class="page show">
-               <h2>About Me</h2>
+               <img style="width: 100%;" src="/assets/images/skyline.jpg">
+               <h1>About Me</h1>
                <!-- <img style="float: right; margin: 6px 6px 16px 16px; box-shadow: 4px 4px 2px #444; width: 30vw; max-width: 300px;" src="/assets/Connor0.png" width="200" /> -->
-               <img style="float: right; margin: 6px 6px 16px 16px; box-shadow: 4px 4px 2px #444; width: 30vw; max-width: 300px;" src="/assets/images/ConnorHappy.png" width="200" />
+               <img style="float: right; margin: 6px 6px 16px 16px; box-shadow: 4px 4px 2px #444; width: 50%; max-width: 300px;" src="/assets/images/ConnorHappy.png"/>
                <p>
                   My name is Connor Pagtakhan! I study at the University of Manitoba and as of now,
                   I am in my fourth year of Computer Engineering.
@@ -165,7 +224,8 @@
                   YEAHHh
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum mi orci. Etiam interdum mi nec dolor eleifend sagittis. Vivamus elit ex, sollicitudin ac consequat ac, egestas eget sem. Quisque non viverra quam, sed tristique nulla. Aenean tortor magna, faucibus nec ullamcorper id, facilisis in nibh. Maecenas imperdiet eros ac nibh ultricies, in consequat mauris fermentum. Suspendisse semper, enim eu suscipit euismod, ligula ex tristique elit, quis consequat odio libero eget lectus. Curabitur eu risus sodales, dapibus lorem eu, accumsan augue. Fusce vitae turpis et nulla ornare suscipit id eu arcu. Vivamus aliquam rutrum lorem ut ultrices. Cras vel ultricies sapien, in lobortis odio. Curabitur laoreet est ut leo fringilla, sit amet congue nisl faucibus. Nulla accumsan ante vitae consequat sodales.
                </p>
-               <img style="float: left; margin: 10px 10px 10px 10px; box-shadow: 4px 4px 2px #444; width: 30vw; max-width: 300px;" src="/assets/Connor1.png" width="200" />
+               <img style="float: left; margin: 6px 6px 16px 16px; box-shadow: 4px 4px 2px #444; width: 50%; max-width: 300px;" src="/assets/Connor1.png"/>
+               <!-- <img style="float: left; margin: 10px 10px 10px 10px; box-shadow: 4px 4px 2px #444; width: 30vw; max-width: 300px;" src="/assets/Connor1.png" width="200" /> -->
                <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum mi orci. Etiam interdum mi nec dolor eleifend sagittis. Vivamus elit ex, sollicitudin ac consequat ac, egestas eget sem. Quisque non viverra quam, sed tristique nulla. Aenean tortor magna, faucibus nec ullamcorper id, facilisis in nibh. Maecenas imperdiet eros ac nibh ultricies, in consequat mauris fermentum. Suspendisse semper, enim eu suscipit euismod, ligula ex tristique elit, quis consequat odio libero eget lectus. Curabitur eu risus sodales, dapibus lorem eu, accumsan augue. Fusce vitae turpis et nulla ornare suscipit id eu arcu. Vivamus aliquam rutrum lorem ut ultrices. Cras vel ultricies sapien, in lobortis odio. Curabitur laoreet est ut leo fringilla, sit amet congue nisl faucibus. Nulla accumsan ante vitae consequat sodales.
                </p>
@@ -192,12 +252,90 @@
                   You can view the source code on <a href="https://github.com/Backback12/backback12.github.io">GitHub</a>!
                </p>
             </div>
-            <div class="page">
-               <h2>All Projects</h2>
-               <p>
-                  What would I even put here
-               </p>
-            </div>
+<div class="page" id="blog">
+<h1>Blog</h1>
+<p>
+   Hello just stuff
+</p>
+<div class="blogpost" style="background-color: #f5f5f5; padding: 5px; margin: 15px 0px">
+<h1>Western Engineering Competition (W.E.C.)</h1>
+<i>January 28, 2024</i>
+<img style="float: right; margin: 6px 6px 16px 16px; box-shadow: 4px 4px 2px #444; width: 50%; max-width: 300px;" src="/assets/images/WEC_300x250_24bit.jpg"/>
+<p>Following our university's engineering competition, our team (Pictured, 
+from left to right: Gary, Connor, Abraham, Daigh) found out we 
+qualified for the Western Engineering Competition 2024! This competition 
+gathers students from western Canada's engineering universities and pits them 
+against each other in competitions divided by categories. (Junior Design, 
+Senior Design, Innovative Design, Impromptu Debate, Consulting Engineering, 
+Communications, Re-Engineering, and <b>Programming</b>)</p>
+<a href="https://www.wesst.ca/">Western Engineering Competition Website</a>
+<p>Our team was competing in the programming competition. Our prompt was 
+to create an application that will help the congnitively disabled to gain 
+their own independence using our app. We only had 8 hours to come up 
+with a project plan, our presentation, and to execute it. The first bit 
+was all brainstorming as we shared our thoughts and ideas, along with how 
+we might be able to implement them. By the end of the first hour, 
+we've come up with a full game plan.</p>
+<p>The next few hours flew by quick as we were all on our laptops busy programming, 
+reading documentation, and new ideas on the fly. Gary and I worked on the front end
+while Abraham and Daigh worked on the backend. Later into our 8 hours we had to 
+begin creating our presentation.</p>
+<p>We presented our application to the panel of judges the next day, and heard the 
+final results that evening. Out of nine teams from all across Canada, we came in 
+second place! Second and first place at WEC qualifies to continue to the 
+<b>Canadian Engineereing Competition (CEC) 2024</b> in Calgary! The next competition 
+takes place from March 1-5th and I'm most looking forward to competing with my team again.</p>
+</div>
+
+<div class="blogpost" style="background-color: #f5f5f5; padding: 5px; margin: 15px 0px;">
+<h1>New Site!</h1>
+<i>December 5, 2023</i>
+<img style="float: right; margin: 6px 6px 16px 16px; box-shadow: 4px 4px 2px #444; width: 50%; max-width: 300px;" src="/assets/images/Site_300x250.jpg"/>
+<p>Hey this is a new portfolio site! This area is more my blog and I'm going to
+be posting whatever I want whenever I want. This is just for fun and I thought
+I'd challenge myself by making this site. Check out the repository here!</p>
+<a href="https://github.com/Backback12/backback12.github.io">GitHub repository</a>!
+</div>
+
+
+
+<div class="blogpost" style="background-color: #f5f5f5; padding: 5px; margin: 15px 0px;">
+   <h1>New Site!</h1>
+   <i>December 5, 2023</i>
+   <img style="float: right; margin: 6px 6px 16px 16px; box-shadow: 4px 4px 2px #444; width: 50%; max-width: 300px;" src="/assets/images/Site_300x250.jpg"/>
+   <p>Hey this is a new portfolio site! This area is more my blog and I'm going to
+   be posting whatever I want whenever I want. This is just for fun and I thought
+   I'd challenge myself by making this site. Check out the repository here!</p>
+   <a href="https://github.com/Backback12/backback12.github.io">GitHub repository</a>!
+</div>
+
+
+<div class="blogpost" style="background-color: #f5f5f5; padding: 5px; margin: 15px 0px;">
+   <h1>New Site!</h1>
+   <i>December 5, 2023</i>
+   <img style="float: right; margin: 6px 6px 16px 16px; box-shadow: 4px 4px 2px #444; width: 50%; max-width: 300px;" src="/assets/images/Site_300x250.jpg"/>
+   <p>Hey this is a new portfolio site! This area is more my blog and I'm going to
+   be posting whatever I want whenever I want. This is just for fun and I thought
+   I'd challenge myself by making this site. Check out the repository here!</p>
+   <a href="https://github.com/Backback12/backback12.github.io">GitHub repository</a>!
+</div>
+
+<div class="blogpost" style="background-color: #f5f5f5; padding: 5px; margin: 15px 0px;" id="abb">
+   <h1>New Site!</h1>
+   <i>December 5, 2023</i>
+   <img style="float: right; margin: 6px 6px 16px 16px; box-shadow: 4px 4px 2px #444; width: 50%; max-width: 300px;" src="/assets/images/Site_300x250.jpg"/>
+   <p>Hey this is a new portfolio site! This area is more my blog and I'm going to
+   be posting whatever I want whenever I want. This is just for fun and I thought
+   I'd challenge myself by making this site. Check out the repository here!</p>
+   <a href="https://github.com/Backback12/backback12.github.io">GitHub repository</a>!
+</div>
+
+
+
+
+
+
+</div>
             <div class="page" style="font-family: 'Comic Sans MS', 'Comic Sans', cursive;">
                <h2>Hobbies</h2>
                <img style="float: right; margin: 10px 10px 10px 10px; box-shadow: 4px 4px 2px #444; width: 30vw; max-width: 300px;" src="/assets/flower.jpg" width="200" />
@@ -221,11 +359,11 @@
       <footer>
          <!-- Connor Pagtakhan | Last Updated Dec 2023 -->
          <div class="indent">
-            &copy Connor Pagtakhan
+            <span>&copy Connor Pagtakhan</span>
          </div>
          <div class="indent">
             <img class="inline-icon" src="/assets/netshell.dll_14_1117-2.png">
-            Updated: 12/2023
+            <span>Updated: 01/2024</span>
          </div>
       </footer>
    </div>

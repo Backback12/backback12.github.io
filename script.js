@@ -1,18 +1,30 @@
 // center window
-const div = document.querySelector('.window');
-const divWidth = div.offsetWidth;
-const divHeight = div.offsetHeight;
+function initWindow() {
+    const div = document.querySelector('.window');
 
-const windowWidth = window.innerWidth;
-const windowHeight = window.innerHeight;
-
-const leftPosition = (windowWidth - divWidth) / 2;
-const topPosition = (windowHeight - divHeight) / 2;
-
-div.style.left = leftPosition + 'px';
-div.style.top = topPosition + 'px';
+    div.style.width = '90%';
+    div.style.height = '90%';
+    div.style.display = 'flex';
 
 
+    const divWidth = div.offsetWidth;
+    const divHeight = div.offsetHeight;
+
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+
+    const leftPosition = (windowWidth - divWidth) / 2;
+    const topPosition = (windowHeight - divHeight) / 2;
+
+    div.style.left = leftPosition + 'px';
+    div.style.top = topPosition + 'px';
+
+
+    
+
+    
+}
+initWindow();
 
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
@@ -61,6 +73,25 @@ window.onclick = function(event) {
 
 
 
+var coll = document.getElementsByClassName("expand");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    content = content.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+
+
+
+
 // Window Menu Stuff
 const btns = Array.from(document.getElementById('menu').getElementsByClassName('btn'));
 // Loop through the buttons and add the active class to the current/clicked button
@@ -71,6 +102,16 @@ btns.forEach((btn, index) => {
         this.className += " active";
         
         showPage(index);
+    });
+});
+// Sub Menu
+//const btn_sub = Array.from(document.getElementById('menu').getElementsByTagName('btns'));
+const blogpost_btns = Array.from(document.getElementById('menu').getElementsByClassName('blogpost-btn'));
+const blogposts = Array.from(document.getElementById('blog').getElementsByClassName('blogpost'))
+blogpost_btns.forEach((btn, index) => {
+    btn.addEventListener("click", function() {
+        showPage(3);
+        blogposts[index].scrollIntoView({behavior:'smooth'});
     });
 });
 
@@ -96,6 +137,7 @@ function dragElement(elmnt) {
   if (elmnt.getElementsByClassName("title")[0]) {
     // if present, the header is where you move the DIV from:
     elmnt.getElementsByClassName("title")[0].onmousedown = dragMouseDown;
+    // elmnt.getElementsByClassName("title")[0].on
   } else {
     // otherwise, move the DIV from anywhere inside the DIV:
     elmnt.onmousedown = dragMouseDown;
@@ -161,3 +203,43 @@ function helpWindow(hide=false) {
         document.body.style.cursor = "default";
     }
 }
+
+
+
+
+
+
+
+
+// ***************** DESKTOP *****************
+const desktop_icons = document.querySelectorAll('.desktop-icon')
+desktop_icons.forEach(icon => {
+    const img = icon.querySelector('.desktop-img');
+    const tint = icon.querySelector('.tint');
+    const span = icon.querySelector('span');
+
+
+    function run_desktop_icon(event) {
+        // event.target.parentNode.classList[1]
+        if (event.target.parentNode.classList[1] == 'person') {
+            console.log("STARTING PORTFOLIO");
+            initWindow();
+        }
+        else {
+            console.log("no", event.target.parentNode.classList[1])
+        }
+    }
+
+    function handle_click(event) {
+        event.target.parentNode.classList.toggle('selected');
+    }
+
+    img.addEventListener('click', handle_click);
+    tint.addEventListener('click', handle_click);
+    span.addEventListener('click', handle_click);
+    
+    // img.addEventListener('dblclick', (event) => {console.log("double")});
+    img.addEventListener('dblclick', run_desktop_icon);
+    tint.addEventListener('dblclick', run_desktop_icon);
+    span.addEventListener('dblclick', run_desktop_icon);
+})

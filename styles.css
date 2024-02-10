@@ -2,9 +2,10 @@
 
 
 :root {
-    --background: #008080;
-    --bg-primary: #b4aca0;
-    /* --bg-primary: #d4d0c8; */
+    /* --background: #008080; */
+    --background: #3a6ea5;
+    /* --bg-primary: #b4aca0; */
+    --bg-primary: #d4d0c8;
     --bg-primary-hover: #b4aca0;
     --bg-light: rgb(235, 232, 228);
     --inset-light: #ffffff;
@@ -31,10 +32,10 @@ body {
     /* font-family: 'Tahoma XP', 'Tahoma', sans-serif; */
     /* font-family: 'Tahoma', sans-serif; */
     font-family: 'Tahoma';
+    font-size: 11px;
     /* font-family: sans-serif; */
     /* font-size: 24px; */
     /* font-size: 12px; */
-    font-size: 11px;
 
     /* font-weight: 100; */
     /* font-stretch: 100px; */
@@ -118,8 +119,9 @@ body {
 }
 .navbar .title {
     color: white;
-    background-image: linear-gradient(to right, #180A6C, #9ABCE4);
-    padding: 2px 2px 2px 4px;
+    /* background-image: linear-gradient(to right, #180A6C, #9ABCE4); */
+    background-image: linear-gradient(to right, #001c69, #a3c9f0);
+    padding: 0px 2px 0px 4px;
     margin: 0px;
     
     font-weight: 600;
@@ -127,6 +129,21 @@ body {
 
     z-index: 10;
     /* cursor: move; */
+    font-family: 'Tahoma XP';
+    font-size: 16px;
+}
+.navbar .title span {
+    /* margin-top: -8px; */
+    /* padding-top: -4px; */
+    /* top: -2px; */
+    /* margin: auto; */
+    margin-top: 1px;
+    margin-left: 4px;
+    padding: 0;
+    /* padding-top: -8px; */
+    /* height: 2px; */
+    /* background-color: red; */
+    position: absolute;
 }
 .navbar .menu-items {
     background-color: var(--bg-primary);
@@ -224,17 +241,24 @@ navbar li {
     background: none;
     color: black;
     border: 0;
-    /* font-family: 'Tahoma XP', sans-serif; */
+    font-family: 'Tahoma XP', sans-serif;
     /* font-size: 24px; */
-    /* font-size: 16px; */
+    font-size: 18px;
+    /* font-family: inherit; */
 
-    padding: 5px 12px;
+    padding: 4px 12px;
     /* padding: 2px; */
     margin: 0;
 }
-.dropdown-btn:hover, .dropdown-btn:focus {
+.dropdown-btn:hover {
+    /* background: red; */
+}
+.dropdown-btn:focus {
     /* box-shadow: inset var(--inset-light) 1.5px 1.5px 0px, inset var(--inset-dark) -1.5px -1.5px 0px; */
     box-shadow: inset var(--inset-light) 1.5px 1.5px 0px, inset var(--inset-dark) -1.5px -1.5px 2px;
+}
+.dropdown-btn:hover:active {
+    box-shadow: inset var(--inset-dark) 1px 1px 1px, inset var(--inset-light) -1px -1px 1px;
 }
 .dropdown {
     position: relative;
@@ -248,16 +272,18 @@ navbar li {
     display: none;
     position: absolute;
     background-color: var(--bg-primary);
-    min-width: 160px;
+    /* min-width: 160px; */
+    width: 100px;
     z-index: 1;
     box-shadow: inset var(--inset-light) 1px 1px 2px, inset var(--inset-dark) -1px -1px 2px;
     
 }
 .dropdown-content a {
-    padding: 5px 12px;
+    padding: 2px 5px 5px;
     text-decoration: none;
     color: black;
     display: block;
+    cursor: default;
 }
 .dropdown-content a:hover {
     background-color: #180A6C;
@@ -343,11 +369,7 @@ main .menu div {
     /* margin: 2px; */
     /* margin: -2px; */
 }
-main .menu a {
-    /* background-color: #dddddd; */
-    /* padding: 2px; */
-}
-main .menu .btn {
+main .menu .btn, main .menu .btn-sub {
     font-family: inherit;
     font-size: inherit;
     letter-spacing: inherit;
@@ -364,18 +386,21 @@ main .menu .btn {
     /* border: 0; */
     font-size: 11px;
 }
-main .menu .btn.active > span {
+main .menu .btn.active > span, main .menu .btn-sub:active > span {
     background-color: #0a246a;
     color: white;
     /* background-color: red; */
 }
-main .menu .btn span {
+main .menu .btn span, main .menu .btn-sub span {
+    position: relative;
     /* margin: 0; */
     padding: 1px;
-    padding-top: 0;
-    border: 0;
+    /* padding-top: 0; */
+    top: -2px;
+    /* border: 0; */
     /* margin-top: -5px; */
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
+    /* background-color: red; */
 }
 
 main .menu, main .content {
@@ -387,12 +412,32 @@ main .menu, main .content {
     /* height: 100px; */
     
     /* overflow-y: scroll; */
+    margin-top: 1px;
+    margin-bottom: 1px;
 }
 .menu-list {
     margin: 0;
     list-style-type: none; /* Remove bullets */
     padding: 0;
 
+}
+.menu-list li {
+    /* background-color: purple; */
+    /* padding: 0; */
+    /* margin: 0; */
+}
+
+.expand-menu {
+    /* height: 0; */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.02s linear;
+}
+.expand {
+    content:url('/assets/icons/tree_nse_plus.png')
+}
+.expand.active {
+    content:url('/assets/icons/tree_nse_minus.png')
 }
 
 
@@ -408,7 +453,7 @@ main .menu, main .content {
     background-color: white;
     box-shadow: inset var(--inset-dark) 1px 1px 1px, inset var(--inset-light) -1px -1px 1px;
     margin: 4px;
-    padding: 0px 8px;
+    padding: 6px 8px;
     /* height: 90%; */
     /* font-family: 'Times New Roman', 'Times', 'serif'; */
     overflow-y: scroll;
@@ -422,7 +467,12 @@ main .menu, main .content {
 }
 
 
-
+.desktop {
+    position: absolute;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
 .desktop-icon {
     /* margin-left: 50px; */
     /* display: flex; */
@@ -436,7 +486,8 @@ main .menu, main .content {
 }
 .desktop-icon img {
     position: absolute;
-    margin: 16px;
+    margin: 14px;
+    padding: 2px;
     width: 32px;
     height: 32px;
     /* box-shadow: 10px 10px 0px black; */
@@ -451,13 +502,13 @@ main .menu, main .content {
 .desktop-icon.person img {
     content: url('/assets/icons/person-icon_large.png')
 }
-.desktop-icon.selected.person .tint {
+.desktop-icon.person.selected .tint {
     mask-image: url('/assets/icons/person-icon_large.png');
 }
 .desktop-icon.recycle img {
     content: url('/assets/icons/recycle.png')
 }
-.desktop-icon.selected.recycle .tint {
+.desktop-icon.recycle.selected .tint {
     mask-image: url('/assets/icons/recycle.png');
 }
 
@@ -497,6 +548,8 @@ footer {
     padding: 1px 4px 4px;
     margin: 2px;
     box-shadow: inset var(--inset-dark) 1px 1px, inset var(--inset-light) -1px -1px;
+    display: flex;
+
 }
 
 div {
@@ -529,3 +582,18 @@ div {
   ::-webkit-scrollbar-thumb:hover {
     /* background: #555; */
   }
+
+
+
+
+
+
+
+
+/* =============== blog ============ */
+.blogpost::after {
+    /* fix smaller images */
+content: "";
+clear: both;
+display: table;
+}

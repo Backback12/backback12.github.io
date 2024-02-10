@@ -75,3 +75,4 @@ Inspo:
 - [ ] Clean HTML structures
 - [ ] Clean CSS names 
 - [ ] Tidy Javascript functions (into script.js?)
+- [ ] Expandable submenu (expands "projects" menu item) Javascript heavy solution
